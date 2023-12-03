@@ -1,0 +1,11 @@
+STRINGTABLE quaddisc
+{
+    quaddisc "Quad Disc";
+
+    PY_QUADDISC_RADIUS			        "Radius";
+	PY_QUADDISC_RINGS			        "Rings";
+	PY_QUADDISC_SUBDIVISIONS            "Subdivisions";
+	PY_QUADDISC_SMOOTHING               "Smoothing";
+	PY_QUADDISC_SMOOTHING_ITERATIONS	"Iterations";
+	PY_QUADDISC_SMOOTHING_STIFFNESS     "Stiffness";
+}
