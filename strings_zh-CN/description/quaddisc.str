@@ -1,0 +1,11 @@
+STRINGTABLE quaddisc
+{
+    quaddisc "\u56db\u8fb9\u9762\u5706\u76d8";
+
+    PY_QUADDISC_RADIUS			        "\u534a\u5f84";
+	PY_QUADDISC_RINGS			        "\u5916\u5708\u5206\u6bb5";
+	PY_QUADDISC_SUBDIVISIONS            "\u5185\u90e8\u5206\u6bb5";
+	PY_QUADDISC_SMOOTHING               "\u5e73\u6ed1";
+	PY_QUADDISC_SMOOTHING_ITERATIONS	"\u5e73\u6ed1\u8fed\u4ee3";
+	PY_QUADDISC_SMOOTHING_STIFFNESS     "\u5e73\u6ed1\u5f3a\u5ea6";
+}
