@@ -11,6 +11,8 @@ import c4d
 import os
 import math
 
+from c4d import GeListNode
+
 PLUGIN_ID = 1062048
 
 class Trigonometry:
@@ -207,6 +209,13 @@ class QuadDisc(c4d.plugins.ObjectData):
 
         poly_obj.Message(c4d.MSG_UPDATE)
 
+        phong_tag = op.GetTag(c4d.Tphong)
+        if phong_tag is not None:
+            phong_tag_clone = phong_tag.GetClone(c4d.COPYFLAGS_NONE)
+            poly_obj.InsertTag(phong_tag_clone)
+        else:
+            poly_obj.SetPhong(True, True, c4d.utils.Rad(80.0))
+
         return poly_obj
 
     # Geometry generation
@@ -361,6 +370,13 @@ class QuadDisc(c4d.plugins.ObjectData):
         Smoothing.SmoothPoints(poly_obj, qd_values.SmoothingIterations, qd_values.SmoothingStiffness, points_to_smooth)
 
     # /Geometry generation
+
+    def Message(self, node: GeListNode, type: int, data: object) -> bool:
+        
+        if type == c4d.MSG_MENUPREPARE:
+            node.SetPhong(True, True, c4d.utils.DegToRad(40.0))
+        
+        return True
 
 if __name__ == "__main__":
     # Retrieves the icon path
